@@ -14,6 +14,28 @@
 
   <body>
     <%= yield %>
+    <script type="text/javascript">
+      // Get parameters from edit boxes and configure mouse trail
+      let getp = () => {
+        // Get parameters
+        let f= document.forms["frm"];
+        bubbletrail.size= parseInt(f.bbsize.value);
+        bubbletrail.jitter= parseInt(f.bbjitter.value);
+        bubbletrail.zindex= parseInt(f.bbzindex.value);
+        bubbletrail.life= parseInt(f.bblife.value);
+      }
+      // Set parameters in edit boxes
+      let setp = (size, jitter, zindex, life) => {
+        let f= document.forms["frm"];
+        f.bbsize.value= size;
+        f.bbjitter.value= jitter;
+        f.bbzindex.value= zindex;
+        f.bblife.value= life;
+      }
+      // Show initial values
+      setp(bubbletrail.size, bubbletrail.jitter, bubbletrail.zindex, bubbletrail.life);
+    </script>
+
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
