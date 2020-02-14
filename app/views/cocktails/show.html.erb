@@ -1,0 +1,17 @@
+<div class="navbar-lewagon">
+   <p> <%= link_to 'retour to cocktail', cocktails_path %> </p>
+  <div>
+    <%= image_tag "la_joconde.jpg", alt: "La joconde", class:"avatar"%>
+  </div>
+</div>
+
+<div class="card" style="width: 100%;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> <%= @cocktail.name %> </h5>
+    <% @cocktail.doses.each do |dose| %>
+        <p> <%= dose.ingredient.name %>: <%= dose.description %> </p>
+    <% end %>
+    <h5><%= link_to '+', new_cocktail_dose_path(@cocktail) %></h2>
+  </div>
+</div>

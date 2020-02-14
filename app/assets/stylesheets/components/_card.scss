@@ -1,0 +1,38 @@
+.card {
+  background-color: $pink-h1;
+  border-radius : 5px;
+  box-shadow: 10px 5px 5px blue;
+  h5, p {
+    color: blue;
+  }
+ a {
+    text-decoration: none;
+    opacity: 1;
+  }
+}
+
+
+.card-ingredient {
+  background-color: $pink-h1;
+  border-radius : 5px;
+  box-shadow: 10px 5px 5px blue;
+  opacity :0.8;
+    a {
+      text-decoration: none;
+      opacity: 1;
+    }
+    h5, p {
+    color: blue;
+    font-size: 24px
+  }
+
+}
+
+.ajout{
+  border: 1px solid blue;
+  border-radius : 20px;
+  padding: 20px;
+  margin-bottom:20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}

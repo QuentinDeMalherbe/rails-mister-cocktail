@@ -1,1 +1,24 @@
+body {
+  background-color : $pink-dark;
+}
+
+
+h1, h2 {
+font-family: 'Modak', cursive;
+color : $pink-h1;
+text-shadow: 1px 1px 2px blue;
+padding : 24px;
+}
+
+p {
+  font-family: 'Dancing Script', cursive;
+  color : $pink-h1;
+  text-shadow: 1px 1px 2px blue;
+  font-size : 20px;
+}
+
+h5 {
+  font-size : 28px;
+  color : blue;
+}
 // Specific CSS for your home-page

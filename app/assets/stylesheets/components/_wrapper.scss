@@ -1,0 +1,14 @@
+  .wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  transition: all 1000ms ease;
+}
+
+@media screen and (min-width: 768px)
+{
+  .wrapper
+  {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

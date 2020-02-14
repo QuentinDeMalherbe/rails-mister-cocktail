@@ -1,0 +1,30 @@
+<div class="navbar-lewagon">
+   <p>T'es là pour boire, je vais t'aider!</p>
+  <div>
+   <%= image_tag "la_joconde.jpg", alt: "La joconde", class:"avatar"%>
+  </div>
+</div>
+<h1>Cocktailssssssssssssssss</h1>
+<div class="ajout">
+  <h2>Ajoute ton cocktail créateur fou</h2>
+  <%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name %>
+    <%= f.submit "add", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<div class="container">
+  <div class="wrapper">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"> <%= link_to cocktail.name, cocktail_path(cocktail)%> </h5>
+          <!-- ici mettre d'autre carac et photo -->
+          <% cocktail.doses.each do |dose| %>
+            <p> <%= dose.ingredient.name %>: <%= dose.description %> </p>
+          <% end %>
+        </div>
+      </div>
+    <% end  %>
+  </div>
+</div>
+

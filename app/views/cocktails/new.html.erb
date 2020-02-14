@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="button-central">
+      <%= link_to 'crée ton cocktail', cocktails_path() , method: :post%>
+  </div>
+
+  <div class="wrapper">
+    <% @ingredients.each do |ingredient| %>
+      <div class="card-ingredient" style="width: 18rem;">
+        <%= image_tag "cocktail.png", alt: ingredient.name, class:"card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title"> <p><%= ingredient.name %></p> </h5>
+        </div>
+        <%= simple_form_for [@cocktail_dose, @dose] do |f| %>
+          <%= f.input :description %>
+          <%= f.submit "add", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    <% end  %>
+  </div>
+</div>
